@@ -20,7 +20,7 @@ class AppErrorTest extends CakeTestCase {
     'plugin.seo.seo_url',
   );
   
-  function startTest() {
+  function startTest($method = null) {
 		$this->AppError = new SeoAppError('ignore', 'ignore', /* test */ true);
 		Mock::generate('Controller');
 		$this->AppError->controller = new MockController();
