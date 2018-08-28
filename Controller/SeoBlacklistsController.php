@@ -1,4 +1,5 @@
 <?php
+App::import('Seo.Controller', 'SeoAppController');
 class SeoBlacklistsController extends SeoAppController {
 
 	var $name = 'SeoBlacklists';

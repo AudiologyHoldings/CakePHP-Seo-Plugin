@@ -1,4 +1,5 @@
 <?php
+App::import('Seo.Controller', 'SeoAppController');
 class SeoUrlsController extends SeoAppController {
 
 	var $name = 'SeoUrls';
