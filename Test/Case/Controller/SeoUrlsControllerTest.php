@@ -10,12 +10,12 @@ class TestSeoUrlsController extends SeoUrlsController {
 }
 
 class SeoUrlsControllerTest extends CakeTestCase {
-	function startTest() {
+	function startTest($method = null) {
 		$this->SeoUrls = new TestSeoUrlsController();
 		$this->SeoUrls->constructClasses();
 	}
 
-	function endTest() {
+	function endTest($method = null) {
 		unset($this->SeoUrls);
 		ClassRegistry::flush();
 	}

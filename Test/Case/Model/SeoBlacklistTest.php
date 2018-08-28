@@ -5,7 +5,7 @@ App::import('Model', 'seo.SeoBlacklist');
 class SeoBlacklistTest extends CakeTestCase {
 	var $fixtures = array('plugin.seo.seo_blacklist');
 
-	function startTest() {
+	function startTest($method = null) {
 		$this->SeoBlacklist = ClassRegistry::init('SeoBlacklist');
 	}
 	
@@ -69,7 +69,7 @@ class SeoBlacklistTest extends CakeTestCase {
 		$this->assertEqual('remote', $this->SeoBlacklist->getIpFromServer());
 	}
 
-	function endTest() {
+	function endTest($method = null) {
 		unset($this->SeoBlacklist);
 		ClassRegistry::flush();
 	}

@@ -6,7 +6,7 @@ class SeoUrlTest extends CakeTestCase {
 	var $fixtures = array(
 		'plugin.seo.seo_url'
 	);
-	function startTest() {
+	function startTest($method = null) {
 		$this->SeoUrl = ClassRegistry::init('SeoUrl');
 	}
 	
@@ -39,7 +39,7 @@ class SeoUrlTest extends CakeTestCase {
 		$this->assertEqual('269', $result);
 	}
 
-	function endTest() {
+	function endTest($method = null) {
 		unset($this->SeoUrl);
 		ClassRegistry::flush();
 	}

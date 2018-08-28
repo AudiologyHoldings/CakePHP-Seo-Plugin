@@ -14,7 +14,7 @@ class SeoMetaTagTest extends CakeTestCase {
 		'plugin.seo.seo_canonical',
 	);
 	
-	function startTest() {
+	function startTest($method = null) {
 		$this->SeoMetaTag = ClassRegistry::init('SeoMetaTag');
 		$this->SeoMetaTag->SeoUri->Email = new MockEmailComponent();
 	}
@@ -73,7 +73,7 @@ class SeoMetaTagTest extends CakeTestCase {
 		$this->assertEqual('Content', $results['SeoMetaTag']['content']);
 	}
 
-	function endTest() {
+	function endTest($method = null) {
 		unset($this->SeoMetaTag);
 		ClassRegistry::flush();
 	}

@@ -29,7 +29,7 @@ class TestHoneyPotVisit extends CakeTestModel {
 class BlackListTest extends CakeTestCase {
 	var $BlackList = null;
 	
-	function startTest(){
+	function startTest($method = null){
 		Mock::generate('Controller');
 		Mock::generate('SeoHoneypotVisit');
 		$this->BlackList = new BlackListComponent();
@@ -56,7 +56,7 @@ class BlackListTest extends CakeTestCase {
 		$this->assertTrue($this->BlackList->__isBanned());
 	}
 	
-	function endTest(){
+	function endTest($method = null){
 		unset($this->BlackList);
 	}
 }

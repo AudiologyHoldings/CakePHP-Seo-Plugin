@@ -12,12 +12,12 @@ class SeoCanonicalTest extends CakeTestCase {
 		'plugin.seo.seo_status_code',
 		'plugin.seo.seo_canonical',
 	);*/
-	function startTest() {
+	function startTest($method = null) {
 		$this->SeoCanonical = ClassRegistry::init('SeoCanonical');
 		$this->SeoRedirect->SeoUri->Email = new MockEmailComponent();
 	}
 
-	function endTest() {
+	function endTest($method = null) {
 		unset($this->SeoCanonical);
 		ClassRegistry::flush();
 	}

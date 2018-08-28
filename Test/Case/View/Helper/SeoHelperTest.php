@@ -14,7 +14,7 @@ class SeoHelperTest extends CakeTestCase {
 		'plugin.seo.seo_a_b_test',
 	);
 
-	function startTest() {
+	function startTest($method = null) {
 		$View = new View();
 		$this->Seo = new SeoHelper($View);
 		$this->Seo->Html = new HtmlHelper($View);
@@ -112,7 +112,7 @@ class SeoHelperTest extends CakeTestCase {
 		$this->assertEqual('<title>default</title>', $results);
 	}
 
-	function endTest() {
+	function endTest($method = null) {
 		unset($this->SeometaTagsTag);
 		ClassRegistry::flush();
 	}

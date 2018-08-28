@@ -11,12 +11,12 @@ class TestSeoBlacklistsController extends SeoBlacklistsController {
 }
 
 class SeoBlacklistsControllerTest extends CakeTestCase {
-	function startTest() {
+	function startTest($method = null) {
 		$this->SeoBlacklists = new TestSeoBlacklistsController();
 		$this->SeoBlacklists->constructClasses();
 	}
 
-	function endTest() {
+	function endTest($method = null) {
 		unset($this->SeoBlacklists);
 		ClassRegistry::flush();
 	}

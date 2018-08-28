@@ -14,14 +14,14 @@ class SeoStatusCodeTest extends CakeTestCase {
 		'plugin.seo.seo_canonical',
 	);
 
-	function startTest() {
+	function startTest($method = null) {
 		$this->SeoStatusCode = ClassRegistry::init('SeoStatusCode');
 		$this->SeoRedirect->SeoUri->Email = new MockEmailComponent();
 	}
 	
 	
 
-	function endTest() {
+	function endTest($method = null) {
 		unset($this->SeoStatusCode);
 		ClassRegistry::flush();
 	}
